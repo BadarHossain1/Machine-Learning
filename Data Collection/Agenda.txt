@@ -1,0 +1,9 @@
+Data For Machine Learning:
+
+Suppose you give a image of dog or a cat and give it to a model, the model will recognize the patterns and find out if the picture is of a dog or a cat.
+
+Where to collect data from:
+1. Kaggle --> (You can find datasets on Kaggle in form of csv and json files. You can also participate in competitions and win prizes.)
+2. UCI Machine Learning Repository
+3. Google Dataset Search
+
