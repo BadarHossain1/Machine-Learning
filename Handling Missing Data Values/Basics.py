@@ -1,4 +1,6 @@
-Methods to hanlde missing values
+https://colab.research.google.com/drive/1uBaEUKl0ECxl-taRCkD9EM5A7p6frQJ4#scrollTo=hkrKtOD9mBQF
+
+Methods to handle missing values
 
 1: Imputation. 2: Dropping
 
@@ -32,3 +34,25 @@ plt.show()
 The graph shows that its skew. The thing is that after 6 lakhs there are values but mostly the values are concentrated in the 0.2-0.4 lakh. So, we cant use mean as it will effect the entire dataset. For example: 10 people got jobs, out of them 8 people have a salary of 3 lakh taka where as 2 have 10 lakh taka salary. These two are outliers. We wont get an accurate dataset using mean. So, we use median and mode in this scenarios.
 
 
+Replace the missing values with Median Value
+dataset['salary'].fillna(dataset['salary'].median(), inplace=True)
+
+# check if there is still missing values
+
+dataset.isnull().sum()
+
+# Filling missing places with Mean value
+dataset['salary'].fillna(dataset['salary'].mean(), inplace=True)
+
+Dropping Method
+
+salary_dataset = pd.read_csv('/content/Placement_Dataset.csv')
+salary_dataset.isnull().sum()
+
+# Drop the missing values
+
+salary_dataset = salary_dataset.dropna(how='any')
+salary_dataset.isnull().sum()
+
+salary_dataset.shape
+(148, 15)
