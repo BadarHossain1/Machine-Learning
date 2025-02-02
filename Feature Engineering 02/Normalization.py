@@ -17,3 +17,14 @@ Z-Score Technique
 x' = (x-min)/standard deviation
 
 Standard deviation is (value1 - mean)^2 + ......./Total No. of Values.
+
+
+from sklearn.preprocessing import MinMaxScaler
+
+scaling = MinMaxScaler()
+scaling.fit_transform(df[['square_feet']])
+
+Standardization(Z-score Normalization)
+
+from sklearn.preprocessing import StandardScaler
+scaling.fit_transform(df[['square feet']])
