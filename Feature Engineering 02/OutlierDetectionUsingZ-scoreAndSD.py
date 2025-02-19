@@ -50,6 +50,10 @@ lower_limit
 df_no_outlier = df[(df['height'] < upper_limit) & (df['height'] > lower_limit)]
 df_no_outlier # Less data and no outliers so not working. 
 
+
+
+Z-score outlier removal
+
 import pandas as pd
 import numpy as np
 
